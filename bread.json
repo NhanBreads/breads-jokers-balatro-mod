@@ -1,0 +1,17 @@
+{
+	"id": "bread",	
+	"name": "Bread's Jokers",
+	"author": ["NhanBread"],
+	"description": "The gang's all here! Featuring new Jokers based on LegendDuoKeeper's Server's Discord Members!",
+	"prefix": "breadjokers",
+	"main_file": "main.lua",
+	"priority": 0,
+	"badge_colour": "ff0000",
+	"badge_text_colour": "000000",
+	"display_name": "Bread's Jokers",
+	"version": "0.1.0",
+	"dependencies": [
+		"Steamodded (>=1.0.0~BETA-0305c)",
+		"Lovely (>=0.6)"
+	]
+}
