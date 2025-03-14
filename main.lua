@@ -29,6 +29,7 @@ local base = SMODS.Joker{
     atlas = 'Jokers',
     pos = {x = 1, y = 1},
     soul_pos = { x = 0, y = 1},
+    yes_pool_flag="carbanana_mutate",
     config = { extra = {
 
     }
