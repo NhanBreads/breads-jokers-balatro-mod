@@ -13,7 +13,7 @@ return {
                 }
             },
             j_breadjokers_beoulve = {
-                name = 'Beoulve',
+                name = 'Stamp of Approval',
                 text = {
                     'If played hand contains',
                     'an unscored {C:attention}2{}, apply',
@@ -21,7 +21,8 @@ return {
                     '{C:inactive}-{}',
                     '{C:chips}+#1#{} Chips for every {C:attention}sealed{}',
                     'card in your {C:attention}full deck{}.',
-                    '{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)'
+                    '{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)',
+                    "{C:inactive}'I approve of this concept!' -Beoulve"
                 }
             },
             j_breadjokers_ddwl = {
