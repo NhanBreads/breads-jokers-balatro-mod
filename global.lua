@@ -7,3 +7,9 @@ LDK_Random = {
         'j_breadjokers_greek'
     }
 }
+
+-- function bread_pack_init()
+--     set = {
+--         "LegendServerPack"
+--     }
+-- end

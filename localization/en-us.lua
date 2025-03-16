@@ -82,6 +82,15 @@ return {
                     "{C:inactive}'Nibwurrvsdmcan derfive simmsis' -Supercommandostumpy{}"
                 }
             }
+        },
+        Other = {
+            p_breadjokers_legendserver = {
+                name = "Legend Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:joker} Joker{} cards",
+                }
+            }
         }
     }
 }

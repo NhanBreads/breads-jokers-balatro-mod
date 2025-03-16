@@ -41,6 +41,7 @@ local ldk = SMODS.Joker{
 -- BEOULVE
 local beoulve = SMODS.Joker{
     key = 'beoulve',
+    -- set = 'LegendServerPack',
     rarity = 2,
     cost = 6,
     atlas = 'Jokers',
@@ -82,6 +83,7 @@ local beoulve = SMODS.Joker{
 -- DaleWillFail
 local dwl = SMODS.Joker{
     key = 'dwl',
+    -- set = 'LegendServerPack',
     rarity = 3,
     cost = 7,
     atlas = 'Jokers',
@@ -133,6 +135,7 @@ local dwl = SMODS.Joker{
 -- BB-BonusDale
 local ddwl = SMODS.Joker{
     key = 'ddwl',
+    -- set = 'LegendServerPack',
     rarity = 3,
     cost = 6,
     atlas = 'Jokers',
@@ -182,6 +185,7 @@ local ddwl = SMODS.Joker{
 -- KINTROL ALT DEGREEK
 local greek = SMODS.Joker{
     key = 'greek',
+    -- set = 'LegendServerPack',
     rarity = 3,
     cost = 7,
     atlas = 'Jokers',
@@ -251,6 +255,7 @@ local greek = SMODS.Joker{
 
 local will = SMODS.Joker{
     key = 'will',
+    -- set = 'LegendServerPack',
     rarity = 3,
     cost = 8,
     atlas = 'Jokers',

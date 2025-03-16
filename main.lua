@@ -1,5 +1,6 @@
 assert(SMODS.load_file('global.lua'))()
 assert(SMODS.load_file('Items/jokers.lua'))()
+assert(SMODS.load_file('Items/booster.lua'))()
 
 
 SMODS.current_mod.optional_features = {

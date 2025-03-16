@@ -1,0 +1,22 @@
+-- SMODS.Atlas({
+--     key = "bread_booster",
+--     path = "boosters.png",
+--     px = 71,
+--     py = 95
+-- })
+
+-- SMODS.Booster{
+--     key = "legendserver",
+--     kind = "Joker",
+--     atlas = "bread_booster",
+--     pos = { x = 0, y = 0},
+--     config = { extra = 2, choose = 1},
+--     cost = 8,
+--     order = 1,
+--     weight = 1,
+--     unlocked = true,
+--     discovered = true,
+--     create_card = function(self, card)
+--         return {"LegendServerPack", G.pack_cards, nil, nil, true, true, nil, nil}
+--     end
+-- }
