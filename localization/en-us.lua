@@ -90,6 +90,13 @@ return {
                     "Choose {C:attention}#1#{} of up to",
                     "{C:attention}#2#{C:joker} Joker{} cards",
                 }
+            },
+            discordmemberslistings = {
+                name = "Members",
+                text = {
+                    "Chooses one of the discord",
+                    "members to spawn, except self."
+                }
             }
         }
     }

@@ -6,11 +6,13 @@ local ldk = SMODS.Joker{
     cost = 8,
     atlas = 'Jokers',
     pos = {x = 0, y = 0},
+    soul_pos = {x = 0, y = 1},
     config = { extra = {
         Xmult = 2
     }
     },
     loc_vars = function(self,info_queue,center)
+        info_queue[#info_queue+1] = {key = "discordmemberslistings", set = "Other"}
         return {vars = {center.ability.extra.Xmult}}
     end,
     calculate = function(self,card,context)
@@ -88,6 +90,7 @@ local dwl = SMODS.Joker{
     cost = 7,
     atlas = 'Jokers',
     pos = {x = 4, y = 0},
+    soul_pos = {x = 4, y = 1},
     config = {extra = {pokerhand = "Four of a Kind", xmult = 1.00, xmult_mod = 0.25, odds = 6}},
     loc_vars = function(self,info_queue,center)
         info_queue[#info_queue+1] = G.P_CENTERS.p_spectral_normal_1
@@ -140,6 +143,7 @@ local ddwl = SMODS.Joker{
     cost = 6,
     atlas = 'Jokers',
     pos = {x = 2, y = 0},
+    soul_pos = {x = 2, y = 1},
     config = {extra = {plus_levels = 1, mult = 6, current_mult = 0, planets_used = 0}},
     loc_vars = function(self, info_queue, center)
         local total_levels = 0
@@ -253,63 +257,63 @@ local greek = SMODS.Joker{
     end
 }
 
-local will = SMODS.Joker{
-    key = 'will',
-    -- set = 'LegendServerPack',
-    rarity = 3,
-    cost = 8,
-    atlas = 'Jokers',
-    pos = {x = 5, y = 0},
-    config = { extra = {
-        xmult = 2.5,
-        xmult_mod = 0.2,
-        odds = 1
-    }},
-    loc_vars = function(self,info_queue,center)
-        return {vars = {
-            center.ability.extra.xmult,
-            center.ability.extra.xmult_mod,
-            center.ability.extra.odds
-        }}
-    end,
-    calculate = function(self,card,context)
-        if context.joker_main then
-            if pseudorandom('will') < 1/2 then
-                return {
-                    card = G.joker,
-                    message = "Hell Yeah! Heads!",
-                    Xmult = card.ability.extra.xmult,
-                    repetitions = 4,
-                    colour = G.C.MULT
-                }
-            else
-                card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_mod
-                return {
-                    message = "Damn... Tails...",
-                    colour = G.C.MULT
-                }
-            end
-            if card.ability.extra.xmult <= 1.00 then
-                G.E_MANAGER:add_event(Event({
-                    func = function()
-                        play_sound('tarot1')
-                        card.T.r = -0.2
-                        card:juice_up(0.3, 0.4)
-                        card.states.drag.is = true
-                        card.children.center.pinch.x = true
-                        G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.3, blockable = false,
-                            func = function()
-                                    G.jokers:remove_card(card)
-                                    card:remove()
-                                    card = nil
-                                return true; end})) 
-                        return true
-                    end
-                })) 
-                return {
-                    message = "GOODBYE!"
-                }
-            end
-        end
-    end
-}
+-- local will = SMODS.Joker{
+--     key = 'will',
+--     -- set = 'LegendServerPack',
+--     rarity = 3,
+--     cost = 8,
+--     atlas = 'Jokers',
+--     pos = {x = 5, y = 0},
+--     config = { extra = {
+--         xmult = 2.5,
+--         xmult_mod = 0.2,
+--         odds = 1
+--     }},
+--     loc_vars = function(self,info_queue,center)
+--         return {vars = {
+--             center.ability.extra.xmult,
+--             center.ability.extra.xmult_mod,
+--             center.ability.extra.odds
+--         }}
+--     end,
+--     calculate = function(self,card,context)
+--         if context.joker_main then
+--             if pseudorandom('will') < 1/2 then
+--                 return {
+--                     card = G.joker,
+--                     message = "Hell Yeah! Heads!",
+--                     Xmult = card.ability.extra.xmult,
+--                     repetitions = 4,
+--                     colour = G.C.MULT
+--                 }
+--             else
+--                 card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_mod
+--                 return {
+--                     message = "Damn... Tails...",
+--                     colour = G.C.MULT
+--                 }
+--             end
+--             if card.ability.extra.xmult <= 1.00 then
+--                 G.E_MANAGER:add_event(Event({
+--                     func = function()
+--                         play_sound('tarot1')
+--                         card.T.r = -0.2
+--                         card:juice_up(0.3, 0.4)
+--                         card.states.drag.is = true
+--                         card.children.center.pinch.x = true
+--                         G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.3, blockable = false,
+--                             func = function()
+--                                     G.jokers:remove_card(card)
+--                                     card:remove()
+--                                     card = nil
+--                                 return true; end})) 
+--                         return true
+--                     end
+--                 })) 
+--                 return {
+--                     message = "GOODBYE!"
+--                 }
+--             end
+--         end
+--     end
+-- }
